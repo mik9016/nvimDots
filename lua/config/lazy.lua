@@ -28,6 +28,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.linting.eslint" },
 
     { import = "lazyvim.plugins.extras.lang.tailwind" },
+    -- Live Server
     {
       "barrett-ruth/live-server.nvim",
       build = "pnpm add -g live-server",
@@ -44,7 +45,13 @@ require("lazy").setup({
         require("telescope").load_extension("lazygit")
       end,
     },
-
+    -- GitBlame plugin open with :GitBlame
+    {
+      "dinhhuy258/git.nvim",
+      opts = {
+        default_mappings = true,
+      },
+    },
     {
       "tribela/transparent.nvim",
       event = "VimEnter",
